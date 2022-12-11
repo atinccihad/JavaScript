@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+       var name = "Ali";
+       var sehir = "Istanbul";
+
+       /* Eski yontem alttaki gibi(multi line)
+       var kod = "";
+       kod += "x=12";
+       kod += "y=15";
+       */
+       /* Normal tek tirnak ile kabul edilmiyor alttaki gibi
+       var kod = '
+       x=12;
+       y=15;
+       ';
+       */
+       var kod =`
+       x = 12;
+       y = 15;
+       `;
+       console.log("Merhaba "+name+" Nasilsin "+sehir+" da havalar nasil?");
+       console.log(`Merhaba ${name} Nasilsin ${sehir} da havalar nasil?`);
+      
+    </script>
+
+</body>
+</html>
