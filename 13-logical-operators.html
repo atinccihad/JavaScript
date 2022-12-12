@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+       let x = false;
+       let y = true;
+       let z = true;
+       let m = false;
+       let n = "false";
+
+       const compration1 = true && null;
+       console.log(compration1);
+
+       const compration2 = y && z && 5; // 5
+       console.log(compration2);
+
+       const compration3 = y && 5 && z; // true
+       console.log(compration3);
+
+       const compration4 = y && m && z && 5; // false
+       console.log(compration4);
+
+       const compration5 = false && null;
+       console.log(compration5);
+
+       const compration6 = z || 34;
+       console.log(compration6);
+
+       const compration7 = m || x || false || 34;
+       console.log(compration7);
+
+       const compration8 = n || 34; // false
+       console.log(compration8);
+
+       const compration9 = n && 34; // 34
+       console.log(compration9);
+
+       s2 = "kus";
+       s3 = "kedi";
+       console.log(s2 || s3); // kus
+       console.log(s2 && s3); // kedi
+       console.log(s2 != s3); // true
+       console.log(s2 + s3); // kuskedi
+       console.log(s2 - s3); // NaN
+       console.log(s2 * s3); // NaN
+       console.log(s2 / s3); // NaN
+
+       s2 = true;
+       s3 = false;
+       console.log(!s2); // false
+       console.log(s2 != s3); // true
+       console.log(s2 + s3); // 1
+       console.log(s2 - s3); // 1
+       console.log(s2 * s3); // 0
+       console.log(s2 / s3); // Infinity
+       console.log(s2.compration9); // undefined
+
+       s3 = null;
+       console.log(!s3); // true
+
+       not1 = 50;
+       not2 = 60;
+       not3 = 70;
+       console.log(not1 > 30 && not1 < 70); // true
+       console.log(not2 >= 60 && not3 != 70); // false
+       console.log(not3 < 100 || not2 > 80); // true
+       console.log(not1 + not2 < not3 || not1 < 50); // false
+       console.log(not1 < 30 || not2 > 50 && not3 == 70); // true
+
+    </script>
+
+</body>
+</html>
