@@ -13,15 +13,17 @@
 </head>
 <body>
   
-    <input type="text" id="txtName" value="Ali Bey"/>
+    <input type="text" id="txtName" value="Ali Bey" oninput="sayHello()"/>
+
 
   <h3 id="lblMessage">...</h3>
 
     <script>
-    const txtName = document.querySelector("#txtName");
-    const lblMesaj = document.querySelector("#lblMessage"); 
-
-    lblMessage.innerText = `Merhaba ${txtName.value}`;
+      const lblMessage = document.querySelector("#lblMessage");
+      const txtName = document.querySelector("#txtName");
+    function sayHello(){
+      lblMessage.innerHTML = txtName.value;
+    }
 
     </script>
 
