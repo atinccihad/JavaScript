@@ -17,8 +17,9 @@
             text-align: center;
         }
         .text-style{
-            color: green;
+            color: rgb(239, 248, 239);
             text-shadow: 3px 3px 5px black;
+            padding: 2rem;
         }
         .text-style2{
             color: purple;
@@ -37,9 +38,12 @@
     
     <script>
       let pEl = document.querySelector("#pEl");
+      
       pEl.classList.add("text-style");
-      console.log(pEl.classList);
       pEl.classList.remove("red");
+      pEl.classList.add("blue");
+      console.log(pEl.classList);
+      
     </script>
 
 <body>
