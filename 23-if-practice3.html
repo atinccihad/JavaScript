@@ -16,7 +16,21 @@
     Bir textbox tan alinan fiyat bilgisi 500 den buyukse %10 indirim uygulayip sonucu yazan,
    degilse %5 indirip uygulayip sonucu yazan programi yapiniz.
    */
-  
+   function calculate(){
+  let price = document.querySelector('#txtPrice').value;
+  let discount;
+
+  if(price > 500){
+    //price *= 9/10;
+    discount = 10;
+  }else{
+    //price *= 95/100;
+    discount = 5;
+  }
+  price = price - price * discount / 100;
+
+  document.querySelector("#result").innerHTML = `$${price}`;
+ }
   </script>
   
 </body>
