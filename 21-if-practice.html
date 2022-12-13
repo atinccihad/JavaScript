@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="txtPrice">
+  <button onclick="calculate()">Calculate</button>
+  <h3 id="result"></h3>
+      
+  <script>
+  /*
+  Bir textboxtan alinan fiyat bilgisi 500'den buyukse %10 indirim uygulayip
+  sonucu yazan, degilse dogrudan sonucu yazan programi yaziniz.
+  */
+ function calculate(){
+  let price = document.querySelector('#txtPrice').value;
+  if(price > 500){
+    price *= 9/10;
+  }
+  document.querySelector("#result").innerHTML = `$${price}`;
+ }
+  </script>
+  
+</body>
+</html>
