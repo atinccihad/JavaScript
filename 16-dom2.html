@@ -7,6 +7,7 @@
     <title>Document</title>
 
     <style>
+        /*Uygulacagimiz stilleri tanimladik*/
         .red{
             background-color: red;
         }
@@ -21,9 +22,13 @@
             text-shadow: 3px 3px 5px black;
             padding: 2rem;
         }
+        .purple{
+           background-color: purple;
+        }
         .text-style2{
             color: purple;
             text-shadow: 3px 3px 5px rgb(154, 152, 152); 
+            padding: 2rem;
         }
     </style>
 
@@ -37,26 +42,33 @@
     </p>
     
     <script>
-      let pEl = document.querySelector("#pEl");
+        // # ile id'si pEl olan elementi bir obje olusturup atayalim 
+      let pEl = document.querySelector("#pEl"); // bu komut sayesinde id'si "pEl"  olan "p" taglarinin arasindaki elementi sectik
       
-      pEl.classList.add("text-style");
-      pEl.classList.remove("red");
-      pEl.classList.add("blue");
-      console.log(pEl.classList);
+      // .classList methodlari ile ekleme silme, degistirme, icerme vb methodlari cagirabiliyoruz
+      
+      // .add elemente bir ozellik(ust bolumde style taglari arasinda tanimlandi 'text-style') eklemek icin kullanilir 
+      pEl.classList.add("text-style"); 
+      
+      // .remove element uzerinde belirledigimiz style'lardan kaldirmak istediklerimiz icin kullanilir 
+      pEl.classList.remove("red"); 
+
+      // background-color: blue; olarak tanimladigimiz ozelligi '.classList.add("blue")' komutu ile objemize tanimladik
+      pEl.classList.add("blue"); 
+
+      // bir elementin sahip oldugu class'lari  .classList  ile secebiliriz
+      console.log(pEl.classList); 
       
     </script>
 
 <body>
-    <h3>Ali Gel</h3> 
-    <p id="ali" class="purple text-center">
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-     Totam commodi aut <b>ipsum </b>omnis necessitatibus alias, pariatur expedita dolor,
-      doloribus vero similique possimus non! Sunt fugit et blanditiis ea tempore veniam?
-     </p>
+    <h3 class="name blue">Ali Gel</h3> 
+    <p class="messsage"></p>
 <script>
-    let ali = document.querySelector("#ali");
-    ali.classList.add("text-style2");
-    console.log(ali.classList);
+
+    let isim = document.querySelector(`.name`).innerText;
+    console.log(isim);
+    
 </script>
 
  </body>
